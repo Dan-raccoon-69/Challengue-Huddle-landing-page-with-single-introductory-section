@@ -1,0 +1,249 @@
+/* GLOBAL */
+
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft_Magenta: hsl(300, 69%, 71%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.5rem;
+    background-color: var(--Violet);
+    background-image: url('images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+
+/* MAIN ********* */
+
+.main__container{
+    width: 90%;
+    margin: 3rem auto;
+    /* outline: 1px solid green; */
+}
+
+/* main__logo ******/
+
+.main__logo{
+    margin-bottom: 5rem;
+}
+
+.main__logo img{
+    width: 50%;
+}
+
+/* main__content ******/
+
+.main__content{
+    display: grid;
+    gap: 5rem;
+}
+
+/* main__picture */
+
+.main__picture img{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* main__text */
+
+.main__text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.main__title{
+    width: 80%;
+    margin: auto;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.main__p{
+    width: 85%;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    --white: hsla(0, 0%, 100%, 0.8);
+    color: var(--white);
+}
+
+.main__button{
+    padding: 1rem;
+    width: 60%;
+    margin: auto;
+    border-radius: 10rem;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    color: var(--Violet);
+}
+
+/* main__contacto */
+
+.main__contacto{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+ .main__contacto a{
+    width: 30px;
+    height: 30px;
+    outline: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 100%;
+    display: flex;
+    padding: 0.3rem;        
+    transition: all 0.5s;
+} 
+
+.main__contacto a ion-icon{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.5s;
+}
+
+/* FOOTER */
+
+.attribution{
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.attribution p a{
+    color: black;
+    font-weight: bold;
+}
+
+@media screen and (min-width:800px), (max-width:900px) {
+    
+.main__title{
+    font-size: 1.7em;
+}
+
+.main__p{
+    font-size: 1.3em;
+    margin-bottom: 1.2rem;
+}
+
+.main__button{
+    padding: 1.2rem;
+}
+
+}
+
+@media screen and (min-width:900px){
+    body{
+        font-size: 1.6rem;
+        background-image: url('images/bg-desktop.svg');
+    }
+    
+    /* MAIN ********* */
+    
+    .main__container{
+        width: 85%;
+        height: 80vh;
+        margin: auto;
+    }
+    
+    /* main__logo ******/
+    
+    .main__logo{
+        margin-bottom: 3rem;
+    }
+    
+    .main__logo img{
+        width: 15%;
+    }
+
+    /* main__content ******/
+
+    .main__content{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 5rem;
+    }
+
+    /* main__picture */
+
+    .main__picture img{
+        display: block;
+        width: 100%;
+    }
+    
+    /* main__text */
+
+    .main__text{
+        gap: 0;
+        text-align: left;
+    }
+
+    .main__title{
+        width: 85%;
+        margin: 0;
+        font-size: 2em;
+        margin: 4rem 0 2rem 0;
+    }
+
+    .main__p{
+        width: 100%;
+        font-size: 1.1em;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .main__contacto{
+        margin-top: 3rem;
+        justify-content: end;
+    }
+
+    .main__button{
+        width: 40%;
+        margin: 0;
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        font-size: 1em;
+        transition: all 0.5s;
+    }
+
+    .main__button:hover{
+        background-color: var(--Soft_Magenta);
+        color: var(--white);
+    }
+
+    .main__contacto a:hover{
+        outline: 1px solid var(--Soft_Magenta);
+    } 
+    
+    .main__contacto a ion-icon:hover{
+        color: var(--Soft_Magenta);
+    }
+
+} 
